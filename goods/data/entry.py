@@ -43,7 +43,7 @@ def print_goods(search_result):
         goods["index"] = index
         goods_row = [goods.get(item, None) for item in ITEM_KEY]
         goods_table.add_row(goods_row)
-    print(colorful_text('ready to hands chopping?', Fore.CYAN))
+    print((colorful_text('ready to hands chopping?', Fore.CYAN)))
     print(goods_table)
     open_detail_page(search_result)
 
@@ -60,13 +60,13 @@ def open_detail_page(filtered_goods):
     :param filtered_goods
     :return: None
     """
-    print(colorful_text('which do you prefer? type it\'s index', Fore.MAGENTA))
-    print(colorful_text('if many, use \',\' to split them', Fore.MAGENTA))
-    print(colorful_text('use \'control + c\' to exit.', Fore.MAGENTA))
+    print((colorful_text('which do you prefer? type it\'s index', Fore.MAGENTA)))
+    print((colorful_text('if many, use \',\' to split them', Fore.MAGENTA)))
+    print((colorful_text('use \'control + c\' to exit.', Fore.MAGENTA)))
     try:
-        index = input('goods index: ')
-        result_goods = filter(get_target_goods(
-            index.split(',')), filtered_goods)
+        index = eval(input('goods index: '))
+        result_goods = list(filter(get_target_goods(
+            index.split(',')), filtered_goods))
         goods_list = [goods for goods in result_goods]
 
         if len(goods_list):

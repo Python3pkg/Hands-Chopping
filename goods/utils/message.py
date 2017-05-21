@@ -28,7 +28,7 @@ def error_message(message='Ops, there are some error...'):
     :param message: error message
     :return: None
     """
-    print(colorful_text(message, Fore.RED))
+    print((colorful_text(message, Fore.RED)))
 
 
 def error(message='Ops, there are some error...'):
@@ -37,8 +37,8 @@ def error(message='Ops, there are some error...'):
     :param message: error message
     :return: None
     """
-    print(colorful_text(message, Fore.RED))
+    print((colorful_text(message, Fore.RED)))
 
 
 def notice(message, color=Fore.RESET):
-    print(colorful_text(message, color))
+    print((colorful_text(message, color)))
